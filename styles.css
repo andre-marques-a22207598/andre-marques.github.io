@@ -1,0 +1,28 @@
+body {
+    background-color: #b3b3b3;
+}
+.foto-alfama {
+  width: 400px;   
+  height: auto;   
+  border: 2.5px solid black; 
+}
+
+.nav-list {
+  list-style: none;       
+  display: flex;          
+  gap: 40px;              
+  margin: 0;
+  padding: 0;
+}
+
+
+.nav-list li a {
+  color: rgb(0, 0, 0);     
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+
+.nav-list li a:hover {
+  color: #d900ff;     
+}
