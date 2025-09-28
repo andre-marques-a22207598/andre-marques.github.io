@@ -26,3 +26,14 @@ body {
 .nav-list li a:hover {
   color: #d900ff;     
 }
+
+.fotografias {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 10px;
+        }
+        .fotografias img {
+            width: 150px;
+            border-radius: 20px;
+        }
