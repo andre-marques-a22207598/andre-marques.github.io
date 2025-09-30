@@ -1,48 +1,52 @@
 body {
     margin: 0px;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* garante footer no final */
 }
+
 /* HERO IMAGE */
 section#hero-image {
-    position: relative; /* necessário para posicionamento absoluto interno */
+    position: relative;
     height: 100vh;
-    background-color: #222; /* cor de fallback */
-    background-image: url('hero.jpg'); /* substitua pela sua imagem */
+    background-color: #222;
+    background-image: url('hero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
 }
 
-/* Sobreposição escura para destaque do texto */
 #hero-image::before {
     content: "";
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
-/* CONTEÚDO DA HERO */
 .hero-content {
     position: absolute;
-    top: 40%; /* menos do que 50% para subir o conteúdo */
+    top: 40%;
     left: 50%;
-    transform: translate(-50%, -40%); /* ajusta o alinhamento vertical */
+    transform: translate(-50%, -40%);
     text-align: center;
     color: #fff;
     z-index: 2;
     padding: 0 20px;
 }
 
-/* Mantém título e subtítulo centralizados visualmente */
 .hero-content h1 {
     font-size: 4rem;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 3px;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .hero-content p {
@@ -50,11 +54,10 @@ section#hero-image {
     font-size: 1.5rem;
     line-height: 1.5;
     max-width: 600px;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
 }
 
-/* BOTÃO ESTILIZADO */
 .hero-content .hero-btn {
     display: inline-block;
     padding: 15px 35px;
@@ -73,48 +76,46 @@ section#hero-image {
 
 /* Menu horizontal no topo */
 nav {
-    position: fixed; /* fixo no topo */
+    position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* semitransparente */
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 10;
-    
 }
 
 nav .menu {
     display: flex;
-    justify-content: center; /* centraliza horizontalmente */
-    list-style: none; /* remove bullets */
+    justify-content: center;
+    list-style: none;
     margin: 10px;
     padding: 10px;
 }
 
 nav .menu li {
-    margin: 0 20px; /* espaço entre os itens */
+    margin: 0 20px;
 }
 
 nav .menu li a {
-    text-decoration: none; /* remove sublinhado */
+    text-decoration: none;
     color: white;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav .menu li a:hover {
-    color: #ff5722; /* cor ao passar o mouse */
+    color: #ff5722;
 }
 
 /* Seções gerais */
 section {
-    padding: 80px 20px; /* espaçamento interno */
-    height: 100vh;
+    padding: 80px 20px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-/* Títulos das seções */
 section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -122,7 +123,6 @@ section h2 {
     text-align: center;
 }
 
-/* Parágrafos */
 section p {
     font-size: 1.2rem;
     max-width: 800px;
@@ -131,17 +131,6 @@ section p {
     color: #ffffff;
 }
 
-/* Seção Projetos */
-#projetos {
-    background-color: #f2f2f2; /* cinza claro */
-}
-
-/* Seção Interfaces Web */
-#interfaces-web {
-    background-color: #e0f7fa; /* azul clarinho */
-}
-
-/* Links dentro das seções */
 section a {
     color: #ff5722;
     text-decoration: none;
@@ -153,7 +142,6 @@ section a:hover {
     color: #e64a19;
 }
 
-/* Responsivo para tablets e celulares */
 @media (max-width: 768px) {
     section h2 {
         font-size: 2rem;
@@ -162,5 +150,176 @@ section a:hover {
     section p {
         font-size: 1rem;
         padding: 0 10px;
+    }
+}
+
+/* Seção Projetos */
+#projetos {
+    background-color: #ffe0b2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#projetos>p {
+    color: #8e3b46;
+    font-weight: bold;
+}
+
+.cards {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #f9a9b5;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    color: black;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Interfaces Web */
+#interfaces-web {
+    background-color: #c8e6c9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.codepen-link {
+    display: inline-block;
+    margin-top: 200px;
+    padding: 12px 25px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.codepen-link:hover {
+    background-color: #ff5722;
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Seção Disciplina */
+#disciplina {
+    background-color: #90caf9;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+#disciplina .disc-text,
+#disciplina .wordcloud {
+    flex: 1 1 400px;
+}
+
+#disciplina h2 {
+    color: #0d47a1;
+}
+
+#disciplina p {
+    color: #0d47a1;
+    text-align: justify;
+}
+
+.disc-footer {
+    width: 100%;
+    text-align: center;
+    margin-left: 110px;
+    /* espaço em cima */
+    margin-top: 50px;
+}
+
+.disc-footer p {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #0d47a1;
+}
+
+/* Footer */
+footer {
+    background-color: #0d47a1;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: auto;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p:first-child {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+footer p:last-child {
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    #disciplina {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #disciplina .disc-text,
+    #disciplina .wordcloud {
+        width: 100%;
+        max-width: 500px;
     }
 }

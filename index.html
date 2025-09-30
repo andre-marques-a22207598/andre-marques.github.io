@@ -1,72 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
   <meta charset="utf-8">
-  <title>Primeira Página</title>
+  <title>DIW-Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-  <nav>
-        <ul class="menu">
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#interfaces-web">Interfaces Web</a></li>
-        </ul>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="#hero-image">Início</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#disciplina">Interfaces Web</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<section id="hero-image">
-    <div class="hero-content">
+  <main>
+    <section id="hero-image">
+      <div class="hero-content">
         <h1>Explore o Futuro da Web</h1>
-        <p>Aprenda a criar interfaces incríveis, interativas e modernas usando HTML, CSS, JavaScript e frameworks avançados.</p>
+        <p>Aprenda a criar interfaces incríveis, interativas e modernas usando HTML, CSS, JavaScript e frameworks
+          avançados.</p>
         <p></p>
         <a href="#projetos" class="hero-btn">Começar Agora</a>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <h2>Projetos / Labs</h2>
+      <p>Aqui estão os laboratórios desenvolvidos ao longo do ano na unidace curricular de Desenvolvimento de Interfaces
+        WEB.</p>
+
+      <div class="cards">
+        <a href="lab1/cidade/index.html" class="card">
+          <h3>Lab 1</h3>
+          <p>Estrutura base e semântica</p>
+        </a>
+        <a href="lab2/cidade/index.html" class="card">
+          <h3>Lab 2</h3>
+          <p>Estilos e layout responsivo</p>
+        </a>
+        <a href="lab3/cidade/index.html" class="card">
+          <h3>Lab 3</h3>
+          <p>Interatividade com JS</p>
+        </a>
+      </div>
+
+      <a href="https://codepen.io/Andr-Marques-the-solid" target="_blank" class="codepen-link">
+        Ver mais projetos no meu perfil do CodePen →
+      </a>
+    </section>
+
+    <section id="disciplina">
+      <div class="disc-text">
+        <h2>Disciplina: Desenvolvimento de Interfaces Web</h2>
+
+        <p>Eis a minha primeira página Web!</p>
+        <p>
+          Na Unidade Curricular de
+          <a href="https://moodle.ensinolusofona.pt/course/view.php?id=11232">
+            Desenvolvimento de Interfaces Web
+          </a>
+          abordaremos as seguintes tecnologias Web &#127760;:
+        </p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React e Next.js</li>
+        </ul>
+        <div class="disc-footer">
+          <p>Iremos criar soluções criativas!</p>
+        </div>
+
+      </div>
+      <div class="wordcloud">
+        <img src="lab3/images/image.svg" alt="Wordcloud de Tecnologias Web" style="width:100%; border-radius:10px;">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>Universidade Lusófona © 2025</p>
+      <p>André Marques</p>
     </div>
-</section>
-
-<section id="projetos">
-    <h2>Projetos</h2>
-    <p>Aqui estão os labs e exercícios desenvolvidos.</p>
-</section>
-
-<section id="interfaces-web">
-    <h2>Interfaces Web</h2>
-    <p>Seção dedicada à disciplina de Desenvolvimento de Interfaces Web.</p>
-</section>
-
-
-<main>
-  <p>Eis a minha primeira página Web!</p>
-  <p>
-    Na Unidade Curricular de
-    <a href="https://moodle.ensinolusofona.pt/course/view.php?id=11232">
-      Desenvolvimento de Interfaces Web
-    </a>
-    abordaremos as seguintes tecnologias Web &#127760;:
-  </p>
-  <ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-    <li>React e Next.js</li>
-  </ul>
-  <p>Iremos criar soluções criativas!</p>
-  <nav></nav>
-    <ul>
-      <li><a href="../lab1/cidade/index.html">Lab1</a></li>
-      <li><a href="../lab2/cidade/index.html">Lab2</a></li>
-      <li><a href="../lab3/cidade/index.html">Lab3</a></li>
-    </ul>
-  </nav>
-  
-  
-</main>
-
-<footer>
-  <p>Universidade Lusófona © 2025</p>
-</footer>
+  </footer>
 
 </body>
+
 </html>
