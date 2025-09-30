@@ -1,0 +1,196 @@
+/* Reset e base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #319ec9;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Menu responsivo */
+nav.navbar {
+    background-color: #333;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-list li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 0;
+    display: block;
+    text-align: center;
+}
+
+.nav-list li a:hover {
+    color: #59ccf9;
+}
+
+/* Responsivo menu */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-list li a {
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid #444;
+    }
+
+    .nav-list li:last-child a {
+        border-bottom: none;
+    }
+}
+
+/* Main com grid */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+main h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Texto principal acima das imagens */
+.info-text {
+    grid-column: 1 / -1;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+/* Imagens lado a lado */
+.info-img1, .info-img2 {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Tabela à esquerda e curiosidades à direita */
+.table-container {
+    grid-column: 1 / 2;
+}
+
+/* Tabela simples com cores */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.info-table th {
+    background-color: #319ec9;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.info-table td {
+    padding: 10px;
+    background-color: #e3f2fd;
+    color: #222;
+    font-size: 14px;
+}
+
+/* Linhas alternadas */
+.info-table tr:nth-child(even) td {
+    background-color: #d0e7f9;
+}
+
+/* Curiosidades */
+.curiosidades {
+    grid-column: 2 / 3;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Responsivo para mobile */
+@media (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .info-img1, .info-img2 {
+        width: 100%;
+    }
+
+    .table-container, .curiosidades {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .curiosidades {
+        text-align: center;
+    }
+}
+
+/* Extra responsivo para telas muito pequenas */
+@media (max-width: 480px) {
+    main {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .info-table th, .info-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .curiosidades {
+        font-size: 14px;
+    }
+}
