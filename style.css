@@ -107,7 +107,7 @@ nav .menu li a:hover {
 /* Seções gerais */
 section {
     padding: 80px 20px; /* espaçamento interno */
-    min-height: vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
