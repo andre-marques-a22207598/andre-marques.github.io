@@ -206,10 +206,12 @@ span.sol:hover {
 .containerCounter {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
-    margin-bottom:70px;
+    margin-bottom: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+
