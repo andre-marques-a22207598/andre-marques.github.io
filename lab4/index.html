@@ -6,6 +6,7 @@
     <title>Playground - Lab4</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body onmousemove="moverCursor(event)">
@@ -19,24 +20,36 @@
     </header>
     <main>
         <div class="descricao">
-            <p>Have some fun and reload the page</p>
-        </div>
-        <div>
-
+            <p class="fraseReload">Have some fun and reload the page</p>
         </div>
 
+        <div class="container">
+            <div class="esquerda">
+                <button class="naoPassar" onmouseout="
+                    alteraCorDoBotao()">Cursor here for magic!</button>
+                <button class="modo-festa" ondblclick="modoFesta()">🎉 Double click para o MODO FESTA! 🎉</button>
+                <p class="pRebenta">Rebenta-me com um Double Click!</p>
+                <p class="balao" ondblclick="rebentarBalao(this)">🎈</p>
+            </div>
+
+            <div class="direita">
+                <p class="passaPorCima">Passa por cima de mim com o rato para veres as minhas transformações!</p>
+                <img src="images/luffynormal.png" alt="luffys" class="luffy" onmouseover="transformarLuffy()">
+                <p class="tipoTransformacao">Sem transformação</p>
+            </div>
+        </div>
         <!--<img src="images/clickme.png" alt="Click Me" id="clickMe">-->
 
         <div class="containerCounter">
             <button onclick="counterParaExplosão()" class="botao-proibido">Botão Proíbido</button>
             <p class="numero">0</p>
-            <p class="contador">Cuidado! Não clique mais de 10 vezes ou o site explode!</p>
+            <p class="contador">Cuidado! Não cliques 10 vezes ou o site explode!</p>
         </div>
 
 
     </main>
     <footer>
-        <p>DIW 2025</p>
+        <p class="footerText">DIW 2025</p>
     </footer>
     <script src="scripts/main.js"></script>
 </body>
