@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: rgb(5, 37, 65);
+        }
+        body section {
+            display: flex;
+            background-color: rgb(255, 255, 255);
+            align-items: center;
+            justify-content: center;
+            width: 350px;
+            gap: 5px;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        #pinta > button {
+            padding: 0;
+            margin: 0 3px 0 3px;
+            height: 25px;
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <p id="passa">1. Passa por aqui!</p>
+    </section>
+
+    <section id="pinta">
+        <p>2. Pinta-me!</p>
+        <button id="red">Red</button>
+        <button id="green">Green</button>
+        <button id="blue">Blue</button>
+    </section>
+
+    <section id="escreve">
+        <label for="colorir">3. Experimenta escrever...</label>
+        <input id="colorir" alt="" name="">
+    </section>
+
+    <section id="escolher">
+        <label for="cor" >4. Escolha uma cor em inglês:</label>
+        <input id="cor" type="text" >
+        <button>Submeter</button>
+    </section>
+    <section>
+        <button id="contador">Conta!</button>
+        <span id="contagem"></span>
+    </section>
+    <section>
+        <form id="form">
+                <input id="nome" type="text" placeholder="Nome">
+                <input id="idade" type="number" placeholder="Idade" >
+                <input id="submitNomeEIdade" type="submit">
+            </form>
+            <p id="mostrarTexto"></p>
+    </section>
+
+    <section id="contaAuto">
+        <p id="automatic">Automatic Counter!</p>
+        <span id="contadorAutomatico">0</span>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
